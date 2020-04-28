@@ -1,0 +1,21 @@
+doctype html
+head
+  title Try XSY for Free
+  include ../includes/head.pug
+  link(rel='stylesheet' type='text/css' href='/stylesheets/login.css')
+.container.d-flex.flex-column.h-100.justify-content-center(style="max-width: 320px")
+  form.login.d-flex.flex-column.align-items-center(action="/process-signup", method="post")
+    h3.headline.my-3 Try XYZ for Free
+    .form-group.w-100
+      label(for="email") Email address
+      input#input-email.email.form-control.is-invalid(name="email", type="text", placeholder="e.g. david@widgetco.com")
+      .invalid-feedback Please enter your email address.
+    .form-group.w-100
+      label(for="password") Password
+      input#input-password.password.form-control.is-invalid(name="password" type="password")
+      .invalid-feedback Please enter your password.
+    .form-group.w-100
+      label(for="confirm-password") Confirm password
+      input#input-confirm-password.password.form-control.is-invalid(name="confirmPassword" type="password")
+      .invalid-feedback Please enter your password.
+    button#btn-submit.submit.btn.btn-block.btn-primary.mb-3 Sign up

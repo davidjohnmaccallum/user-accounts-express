@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>User Accounts Express</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Login</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:3000/<datalist><option>http://localhost:3000/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//button[@id='navbar-toggler']/span<datalist><option>//button[@id='navbar-toggler']/span</option><option>//span</option><option>css=span.navbar-toggler-icon</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=nav-link-login<datalist><option>id=nav-link-login</option><option>link=Login</option><option>//a[contains(text(),'Login')]</option><option>//a[@id='nav-link-login']</option><option>//div[@id='navbarSupportedContent']/ul/li[2]/a</option><option>//a[contains(@href, '/login')]</option><option>//li[2]/a</option><option>css=#nav-link-login</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=input-email<datalist><option>id=input-email</option><option>name=email</option><option>//input[@id='input-email']</option><option>//input</option><option>css=#input-email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=input-email<datalist><option>id=input-email</option><option>name=email</option><option>//input[@id='input-email']</option><option>//input</option><option>css=#input-email</option></datalist></td><td>davidjohnmac@gmail.com</td>
+</tr>
+<tr><td>type</td><td>id=input-password<datalist><option>id=input-password</option><option>name=password</option><option>//input[@id='input-password']</option><option>//div[2]/input</option><option>css=#input-password</option></datalist></td><td>1234</td>
+</tr>
+<tr><td>click</td><td>id=btn-login<datalist><option>id=btn-login</option><option>//button[@id='btn-login']</option><option>//form/button</option><option>css=#btn-login</option></datalist></td><td></td>
+</tr>
+<tr><td>assertTitle</td><td>Protected page<datalist><option>//h1</option><option>css=h1</option><option></option><option>Protected page</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

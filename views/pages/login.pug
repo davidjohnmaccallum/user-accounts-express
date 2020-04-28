@@ -1,0 +1,25 @@
+doctype html
+head
+  title Login
+  include ../includes/head.pug
+  link(rel='stylesheet' type='text/css' href='/stylesheets/login.css')
+.container.d-flex.flex-column.h-100.justify-content-center(style="max-width: 320px")
+  .login.d-flex.flex-column.align-items-center
+    img.my-3(src="https://via.placeholder.com/150", width="150")
+    h3.headline.mb-3 Login in to XYZ
+    button#btn-facebook.btn.btn-block.btn-facebook-login Use my Facebook account
+    button#btn-google.btn.btn-block.btn-google-login Use my Goolge account
+    .divider.mt-3 -- Or, use my email address --
+    form.w-100(method="post")
+      if error
+        p.text-danger.mt-3=error
+      .form-group.w-100
+        label(for="email") Email address
+        input#input-email.email.form-control(name="email", type="text", placeholder="e.g. david@widgetco.com")
+        .invalid-feedback Please enter your email address.
+      .form-group.w-100
+        label(for="password") Password
+        input#input-password.password.form-control(name="password", type="password")
+        .invalid-feedback Please enter your password.
+      button#btn-login.submit.btn.btn-block.btn-primary.mb-3 Login
+    button#btn-forgot.forgot.btn.btn-link.mb-3 Forgot your password?

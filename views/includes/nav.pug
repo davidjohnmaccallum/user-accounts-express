@@ -1,0 +1,24 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  a#navbar-brand.navbar-brand(href='/') XYZ
+  button#navbar-toggler.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbar-content' aria-controls='navbar-content' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbar-content.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item.active
+        a#nav-link-home.nav-link(href='/')
+          | Home 
+          span.sr-only (current)
+      if !user
+        li.nav-item
+          a#nav-link-login.nav-link(href='/login') Login
+        li.nav-item
+          a#nav-link-signup.btn.btn-block.btn-warning.nav-link(href='/signup') Try XYZ Free
+    ul.navbar-nav.ml-auto
+      if user
+        li.nav-item.dropdown
+          a#nav-link-profile.nav-link.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            i.fas.fa-user
+            |  Profile
+          .dropdown-menu.dropdown-menu-right.dropdown-info(aria-labelledby='nav-link-profile')
+            a#nav-link-my-account.dropdown-item(href='#') My account
+            a#nav-link-logout.dropdown-item(href='/logout') Log out

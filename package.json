@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Almost every app I build needs to manage user accounts. Onboarding users, authenticating users, letting users update their profiles, reset their password when the user forets it, grant the user permissions, control access to resources based on permissions and on resource ownership. In this project I attempt a best practice implementation using [Passport](http://www.passportjs.org/).",
   "main": "index.js",
+  "engines": {
+    "node": "14"
+  },
   "scripts": {
     "r": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,9 +22,17 @@
   },
   "homepage": "https://github.com/davidjohnmaccallum/user-accounts-express#readme",
   "dependencies": {
+    "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "getenv": "^1.0.0",
     "mongodb": "^3.5.6",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "pug": "^2.0.4"
   },
   "devDependencies": {
