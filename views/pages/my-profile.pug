@@ -1,10 +1,11 @@
 doctype html
 head
-  title Try XSY for Free
+  title My Profile
   include ../includes/head.pug
+include ../includes/nav.pug
 .container.d-flex.flex-column.h-100.justify-content-center(style="max-width: 320px")
   form.login.d-flex.flex-column.align-items-center(method="post")
-    h3.headline.my-3 Try XYZ for Free
+    h3.headline.my-3 My Profile
     .form-group.w-100
       label(for="email") Email address
       input#input-email.email.form-control(name="email", type="text", placeholder="e.g. david@widgetco.com", value=(values.email), class=(errors.email ? 'is-invalid' : ''))
@@ -15,14 +16,4 @@ head
       input#input-full-name.name.form-control(name="fullName", type="text", placeholder="e.g. David Jones", value=(values.fullName), class=(errors.fullName ? 'is-invalid' : ''))
       if errors.fullName
         .invalid-feedback=errors.fullName.msg
-    .form-group.w-100
-      label(for="password") Password
-      input#input-password.password.form-control(name="password" type="password", value=(values.password), class=(errors.password ? 'is-invalid' : ''))
-      if errors.password
-        .invalid-feedback=errors.password.msg
-    .form-group.w-100
-      label(for="confirmPassword") Confirm password
-      input#input-confirm-password.password.form-control(name="confirmPassword" type="password", value=(values.confirmPassword), class=(errors.confirmPassword ? 'is-invalid': ''))
-      if errors.confirmPassword
-        .invalid-feedback=errors.confirmPassword.msg
-    button#btn-submit.submit.btn.btn-block.btn-primary.mb-3 Sign up
+    button#btn-submit.submit.btn.btn-block.btn-primary.mb-3 Save

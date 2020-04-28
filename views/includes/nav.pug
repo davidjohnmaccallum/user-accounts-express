@@ -8,17 +8,19 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
         a#nav-link-home.nav-link(href='/')
           | Home 
           span.sr-only (current)
+      li.nav-item.active
+        a#nav-link-home.nav-link(href='/protected') Protected page 
+    ul.navbar-nav.ml-auto
       if !user
         li.nav-item
           a#nav-link-login.nav-link(href='/login') Login
         li.nav-item
           a#nav-link-signup.btn.btn-block.btn-warning.nav-link(href='/signup') Try XYZ Free
-    ul.navbar-nav.ml-auto
       if user
         li.nav-item.dropdown
           a#nav-link-profile.nav-link.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
             i.fas.fa-user
             |  Profile
           .dropdown-menu.dropdown-menu-right.dropdown-info(aria-labelledby='nav-link-profile')
-            a#nav-link-my-account.dropdown-item(href='#') My account
+            a#nav-link-my-account.dropdown-item(href='/my-profile') My account
             a#nav-link-logout.dropdown-item(href='/logout') Log out
