@@ -1,0 +1,9 @@
+doctype html
+head
+  title Error
+  include ../includes/head.pug
+.container
+    h3.headline.my-3= error.message
+    h3= error.status
+    pre #{error.stack}
+    a#btn-home.btn.btn-primary.mb-3(href="/") Home

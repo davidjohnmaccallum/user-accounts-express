@@ -7,8 +7,8 @@ head
   .login.d-flex.flex-column.align-items-center
     img.my-3(src="https://via.placeholder.com/150", width="150")
     h3.headline.mb-3 Login in to XYZ
-    a#btn-facebook.btn.btn-block.btn-facebook-login Use my Facebook account
-    a#btn-google.btn.btn-block.btn-google-login(href="/auth/google") Use my Goolge account
+    a#btn-facebook.btn.btn-block.btn-facebook-login(href="/users/auth/facebook") Use my Facebook account
+    a#btn-google.btn.btn-block.btn-google-login(href="/users/auth/google") Use my Goolge account
     .divider.mt-3 -- Or, use my email address --
     form.w-100(method="post")
       if error

@@ -59,7 +59,7 @@ Setup the scripts for sign up, and my profile pages. See lib/setupAccountManagem
 
 Setup middleware to enforce auth and permissions on routes. See lib/routeGuard.js.
 
-## Sign up and log in using Google
+## Sign up and login with Google
 
 Sign up and log in via OAuth and the user's Google account. I'm following the [Passport Google Provider](http://www.passportjs.org/docs/google/) doc.
 
@@ -67,7 +67,7 @@ Sign up and log in via OAuth and the user's Google account. I'm following the [P
 npm install --save passport-google-oauth
 ```
 
-Create a new project at [Google Developers Console](https://console.developers.google.com/).
+Create a new project at https://console.developers.google.com/.
 
 Configure the consent screen here: https://console.developers.google.com/apis/credentials.
 
@@ -84,15 +84,30 @@ Create credentials here: https://console.developers.google.com/apis/credentials
 
 Set up the Google Auth Strategy. See lib/googleAuthStrategy.js.
 
+## Sign up and login with Facebook
+
+Sign up and log in via OAuth and the user's Facebook account. I'm following the [Passport Facebook Provider](http://www.passportjs.org/docs/facebook/) doc.
+
+```sh
+npm install --save passport-facebook
+```
+
+Create a new app at https://developers.facebook.com/.
+
 ## Environment Variables
 
 This app uses the following environment variables:
 
-| Variable             | Description                                |
-| -------------------- | ------------------------------------------ |
-| DEBUG                | Enables debug logs (true/false).           |
-| GOOGLE_CLIENT_ID     | See http://www.passportjs.org/docs/google/ |
-| GOOGLE_CLIENT_SECRET | See http://www.passportjs.org/docs/google/ |
-| MONGO_PASSWORD       | Database password.                         |
-| MONGO_USERNAME       | Database username.                         |
-| MONGO_HOSTNAME       | Database hostname.                         |
+| Variable                   | Description                                                        |
+| -------------------------- | ------------------------------------------------------------------ |
+| APP_HOST                   | The URL where the app is hosted. Defaults to http://localhost:3000 |
+| DEBUG                      | Enables debug logs (true/false).                                   |
+| COOKIE_MAX_AGE             | Session timeout in milliseconds. Defaults to 60000.                |
+| GOOGLE_OAUTH_CLIENT_ID     | See http://www.passportjs.org/docs/google/                         |
+| GOOGLE_OAUTH_CLIENT_SECRET | See http://www.passportjs.org/docs/google/                         |
+| FACEBOOK_OAUTH_APP_ID      | See http://www.passportjs.org/docs/facebook/                       |
+| FACEBOOK_OAUTH_APP_SECRET  | See http://www.passportjs.org/docs/facebook/                       |
+| MONGO_DB_NAME              | Database name.                                                     |
+| MONGO_PASSWORD             | Database password.                                                 |
+| MONGO_USERNAME             | Database username.                                                 |
+| MONGO_HOSTNAME             | Database hostname.                                                 |

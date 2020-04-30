@@ -13,14 +13,14 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light
     ul.navbar-nav.ml-auto
       if !user
         li.nav-item
-          a#nav-link-login.nav-link(href='/login') Login
+          a#nav-link-login.nav-link(href='/users/login') Login
         li.nav-item
-          a#nav-link-signup.btn.btn-block.btn-warning.nav-link(href='/signup') Try XYZ Free
+          a#nav-link-signup.btn.btn-block.btn-warning.nav-link(href='/users/signup') Try XYZ Free
       if user
         li.nav-item.dropdown
           a#nav-link-profile.nav-link.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
             i.fas.fa-user
             |  Profile
           .dropdown-menu.dropdown-menu-right.dropdown-info(aria-labelledby='nav-link-profile')
-            a#nav-link-my-account.dropdown-item(href='/my-profile') My account
-            a#nav-link-logout.dropdown-item(href='/logout') Log out
+            a#nav-link-my-account.dropdown-item(href='/users/my-profile') My account
+            a#nav-link-logout.dropdown-item(href='/users/logout') Log out
