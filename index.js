@@ -89,7 +89,7 @@ function setupAuthMiddleware(db) {
    * in the session cookie.
    */
   passport.serializeUser((user, done) => {
-    done(null, user?._id?.toString())
+    done(null, user && user._id && user._id.toString())
   })
   /**
    * This function tells Passport how to retrieve the user
